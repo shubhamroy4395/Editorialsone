@@ -2,4 +2,4 @@
 
 ## App live at :https://editorialsone.netlify.app/
 
-# Frontend by @7rajatgupta
+## Frontend by @7rajatgupta
