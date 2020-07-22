@@ -1,3 +1,3 @@
 # Editorials One
 
-## App live at : https://editorials-one.netlify.app/
+## App live at :https://editorialsone.netlify.app/
