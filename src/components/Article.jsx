@@ -1,18 +1,20 @@
 import React from "react";
-import articleLogo from "../static/img/article-detail-header.png";
 import loadingSpinner from "../static/img/loading-spinner.gif";
 const Article = (props) => {
   const { detail } = props.location.state;
+  let nameAndLink = detail.newspaperName.split('- ')
+  console.log(nameAndLink)
   return (
     <>
-      <div className="container article-detail">
-        <img className="detail-header" src={articleLogo} alt="" />
+      <div className="container article-detail" style={{display: 'flex', justifyContent: 'center', alignItems: 'center', marginBottom: '3.5vh'}}>
+        <i style={{fontSize: '3.5rem', color: '#007bff', marginRight: '1%'}} className = "fas fa-newspaper"></i>
+        <h2>Editorials One</h2>
       </div>
       {detail.title ? (
         <div className="container mb-5">
           <div className="container jumbotron mb-5">
             <h2 className="text text-primary mb-5"> {detail.title} </h2>
-            <h4 className="long-text"> {detail.article} </h4>
+            <h5 className="long-text"> {detail.article} </h5>
           </div>
           <div className="container">
             <div className="extra-details">
@@ -21,8 +23,7 @@ const Article = (props) => {
                 {"Updated on : "} {detail.publishDate.substr(0, 16)}{" "}
               </p>
               <p>
-                {" "}
-                {"Source : "} {detail.newspaperName}{" "}
+                <a href={nameAndLink[1]}>{nameAndLink[0]}</a>
               </p>
             </div>
           </div>
