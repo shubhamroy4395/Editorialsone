@@ -6,7 +6,7 @@ import loadingSpinner from "../static/img/loading-spinner.gif";
 const Home = () => {
   const [articles, setArticles] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
-  const apiEndpoint = "http://localhost:8080/hindu";//"https://my-hindu-editorial.herokuapp.com/hindu";
+  const apiEndpoint = "https://my-hindu-editorial.herokuapp.com/hindu";
   const getArticles = async () => {
     setIsLoading(true);
     const response = await axios.get(apiEndpoint);
